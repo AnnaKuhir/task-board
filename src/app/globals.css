@@ -1,26 +1,53 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-dm-sans);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gray-100: #fefefe;
+  --color-gray-200: #f6f6f8;
+  --color-gray-300: #eeeeee;
+  --color-gray-400: #efeff2;
+  --color-gray-500: #d4d4d4;
+  --color-gray-600: #a8a8a8;
+  --color-gray-700: #707070;
+  --color-gray-800: #515151;
+  --color-gray-900: #262626;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-green-100: #daffef;
+  --color-green-200: #9de9c9;
+  --color-green-300: #6dddae;
+  --color-green-400: #3cd293;
+  --color-green-500: #0bc778;
+  --color-green-600: #099f60;
+
+  --color-yellow-100: #fcecd3;
+  --color-yellow-200: #f9d9a7;
+  --color-yellow-300: #f5c57b;
+  --color-yellow-400: #f2b24f;
+  --color-yellow-500: #ef9f23;
+
+  --color-red-100: #ffdddd;
+  --color-red-200: #ffbbbb;
+  --color-red-300: #ff9a9a;
+  --color-red-400: #ff7878;
+  --color-red-500: #ff5656;
+
+  --text-2xs: 10px;
+  --radius-20: 20px;
+  --leading-1\.5: 1.5;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #efeff2;
+  color: #262626;
+  font-family: var(--font-sans), sans-serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
